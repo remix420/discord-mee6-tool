@@ -58,7 +58,7 @@ async def on_ready():
 	sendit.start()
 	change_status.start()
 
-@tasks.loop(seconds=0.0001)
+@tasks.loop(seconds=inv)
 async def sendit():
 	general_channel = client.get_channel(idn)
 	await general_channel.send(message)
