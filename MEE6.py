@@ -56,7 +56,6 @@ client = discord.Client()
 async def on_ready():
 	print(Fore.CYAN + '[' + current_time + '] Connected!')
 	sendit.start()
-	change_status.start()
 
 @tasks.loop(seconds=inv)
 async def sendit():
